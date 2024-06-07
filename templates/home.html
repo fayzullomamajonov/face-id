@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .button1 {
+        background-color: #03BFCB;
+        border: 1px solid #03BFCB;
+        border: none;
+        padding: 20px 36px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+</style>
+<center>
+    <div>
+        <h1>
+            Iltimos Cameraga qarang! 
+        </h1>
+        <img style="width: 400px; padding-bottom:40px;border-radius:15px;" src="../media/photos/images.png" alt="Iltimos Cameraga qarang! ">
+    </div>
+    <a class="button1" href="{% url 'face_recognition' %}">OpenCamera</a>
+
+    
+
+</center>
+
+{% endblock %}

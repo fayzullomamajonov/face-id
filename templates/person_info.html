@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/p_info.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="card-container">
+        {% if person %}
+        <span class="pro">PRO</span>
+        <img class="round" src="{{ person.photo.url }}" alt="Photo of {{ person.first_name }}" />
+        <h3>{{ person.first_name }} {{ person.last_name }}</h3>
+        <h6>{{ person.regions }}</h6>
+        <p>Yoshi: {{ person.age }}</p>
+        <div class="buttons">
+            <button class="primary">
+                <a style="text-decoration: none;" href="{% url 'home' %}">Go back to Home</a>
+            </button>
+        </div>
+        <br>
+        {% else %}
+        <div>
+            <p>{{ message }}</p>
+        </div>
+        {% endif %}
+    </div>
+    
+
+</body>
+</html>

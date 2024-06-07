@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Slabo+27px);
+@import 'bourbon';
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    background: var(--background);
+    color: var(--color);
+    letter-spacing: 1px;
+    transition: background 0.2s ease;
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -ms-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+}
+
+h1{
+  font-size:32px;
+  margin-top:30px;
+  font-family: 'Oswald', sans-serif;  
+  text-align:center;
+}
+.blog-wrapper{
+  padding:15px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  flex-wrap:wrap;
+  .blog-card{
+    max-width:500px;
+    margin:15px;
+    background:#fff;
+    border:1px solid #ababab;
+    text-align:center;
+    cursor:pointer;
+    &:hover{
+      box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+      .card-img{
+        img{
+          opacity:0.8;
+        }
+      }
+    }
+    .card-img{
+      position:relative;
+      text-align:center;
+      background:#aba9aa;
+      img{
+        max-height:220px;
+        width:100%;
+        border-bottom:4px solid #CB6074;
+      }
+
+      h1{
+        position:absolute;
+        margin:0;
+        font-size:42px;
+        bottom:15px;
+        width:100%;
+        color:#fff;
+        font-family: 'Slabo 27px', serif;
+      }
+    }
+    .card-details{
+      margin-top:30px;
+      font-family: 'Roboto', sans-serif;
+      color:#3C3C3C;
+      span{   
+        padding:0 30px;
+        i{
+          margin-right:5px;
+        }
+        
+      }
+    }
+    .card-text{
+      padding:30px 15px;
+      font-family: 'Roboto', sans-serif;
+      line-height:22px;
+    }
+    .read-more{
+      text-decoration: none;
+      display:inline-block;
+      width:auto;
+      text-align:center;
+      text-transform:uppercase;
+      background:#CB6074;
+      color:#fff;
+      padding:15px;
+      margin-bottom:30px;
+      font-family: 'Oswald', sans-serif;
+      &:hover{
+        background: darken(#CB6074,20%);
+      }
+    }
+  }
+}
+
+a.primary {
+	background-color: #03BFCB;
+	border: 1px solid #03BFCB;
+	border-radius: 3px;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 25px;
+    text-decoration: none;
+}
+
+a.primary.ghost {
+	background-color: transparent;
+	color: #02899C;
+}
